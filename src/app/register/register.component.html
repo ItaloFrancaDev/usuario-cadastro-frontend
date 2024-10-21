@@ -1,0 +1,57 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="registration-form">
+  <h2 class="form-title">Cadastro de Usuários</h2>
+
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input id="nome" formControlName="nome" class="form-input" />
+    <div
+      *ngIf="(registrationForm.get('nome')?.touched || registrationForm.get('nome')?.dirty) && registrationForm.get('nome')?.invalid"
+      class="error-messages">
+      <small *ngIf="registrationForm.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+      <small *ngIf="registrationForm.get('nome')?.errors?.['minlength']">Nome deve ter no mínimo 3 caracteres.</small>
+      <small *ngIf="registrationForm.get('nome')?.errors?.['maxlength']">Nome deve ter no máximo 50 caracteres.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input id="email" formControlName="email" class="form-input" />
+    <div
+      *ngIf="(registrationForm.get('email')?.touched || registrationForm.get('email')?.dirty) && registrationForm.get('email')?.invalid"
+      class="error-messages">
+      <small *ngIf="registrationForm.get('email')?.errors?.['required']">E-mail é obrigatório.</small>
+      <small *ngIf="registrationForm.get('email')?.errors?.['email']">E-mail inválido.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" formControlName="senha" class="form-input" />
+    <div
+      *ngIf="(registrationForm.get('senha')?.touched || registrationForm.get('senha')?.dirty) && registrationForm.get('senha')?.invalid"
+      class="error-messages">
+      <small *ngIf="registrationForm.get('senha')?.errors?.['required']">Senha é obrigatória.</small>
+      <small *ngIf="registrationForm.get('senha')?.errors?.['minlength']">A senha deve ter no mínimo 6
+        caracteres.</small>
+      <small *ngIf="registrationForm.get('senha')?.errors?.['maxlength']">A senha deve ter no máximo 20
+        caracteres.</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="confirmarSenha">Confirme a Senha:</label>
+    <input type="password" id="confirmarSenha" formControlName="confirmarSenha" class="form-input" />
+    <div
+      *ngIf="(registrationForm.get('confirmarSenha')?.touched || registrationForm.get('confirmarSenha')?.dirty) && registrationForm.hasError('mismatch')"
+      class="error-messages">
+      <small>As senhas não coincidem.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="registrationForm.invalid" [ngClass]="{'disabled': registrationForm.invalid}"
+    class="submit-button">Registrar</button>
+
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+</form>

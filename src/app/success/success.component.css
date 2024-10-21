@@ -1,0 +1,38 @@
+/* Estilização da página de sucesso */
+.success-message {
+  text-align: center;
+  /* Centraliza o conteúdo */
+  margin: 20px;
+  /* Margem ao redor da mensagem */
+  padding: 20px;
+  /* Espaçamento interno */
+  border: 1px solid #ccc;
+  /* Borda da mensagem */
+  border-radius: 5px;
+  /* Bordas arredondadas */
+  background-color: #f9f9f9;
+  /* Cor de fundo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra da mensagem */
+}
+
+.success-message h1 {
+  color: #28a745;
+  /* Cor verde para o título */
+}
+
+.login-link {
+  display: inline-block;
+  /* Exibe como bloco inline */
+  margin-top: 10px;
+  /* Espaçamento acima do link */
+  color: #007bff;
+  /* Cor do link */
+  text-decoration: none;
+  /* Remove sublinhado do link */
+}
+
+.login-link:hover {
+  text-decoration: underline;
+  /* Sublinha o link ao passar o mouse */
+}

@@ -1,0 +1,33 @@
+<h2>Lista de Usuários</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.nome }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>
+        <button class="editar-btn" (click)="editarUsuario(usuario.id)">✏️ Editar</button>
+        <button class="excluir-btn" (click)="confirmarExclusao(usuario.id)">❌ Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Modal de confirmação de exclusão -->
+<div *ngIf="mostrarConfirmacao" class="modal">
+  <div class="modal-conteudo confirmacao-exclusao">
+    <h3>Confirmação de Exclusão</h3>
+    <p>Tem certeza que deseja excluir o usuário ID {{ usuarioParaExcluir }}?</p>
+    <button class="sim-btn" (click)="excluirUsuarioConfirmado()">Sim</button>
+    <button class="nao-btn" (click)="cancelarExclusao()">Não</button>
+  </div>
+</div>
+
+
