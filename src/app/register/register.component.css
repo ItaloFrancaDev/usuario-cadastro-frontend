@@ -1,90 +1,90 @@
 .registration-form {
   max-width: 400px;
-  /* Largura máxima do formulário */
+
   margin: 0 auto;
-  /* Centraliza o formulário */
+
   padding: 20px;
   background-color: #f9f9f9;
-  /* Cor de fundo do formulário */
+
   border-radius: 8px;
-  /* Bordas arredondadas */
+
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
+
 }
 
 .form-title {
   text-align: center;
-  /* Centraliza o título */
+
   margin-bottom: 20px;
-  /* Espaço abaixo do título */
+
   color: #333;
-  /* Cor do título */
+
 }
 
 .form-group {
   margin-bottom: 15px;
-  /* Espaço entre os campos */
+
 }
 
 .form-input {
   width: 100%;
-  /* Largura total do input */
+
   padding: 10px;
-  /* Espaçamento interno do input */
+
   border: 1px solid #ccc;
-  /* Borda do input */
+
   border-radius: 4px;
-  /* Bordas arredondadas do input */
+
 }
 
 .form-input:focus {
   border-color: #66afe9;
-  /* Cor da borda ao focar */
+
   outline: none;
-  /* Remove o contorno padrão */
+
 }
 
 .error-messages {
   color: red;
-  /* Cor das mensagens de erro */
+
   font-size: 0.875em;
-  /* Tamanho da fonte das mensagens de erro */
+
 }
 
 .submit-button {
   width: 100%;
-  /* Largura total do botão */
+
   padding: 10px;
-  /* Espaçamento interno do botão */
+
   background-color: green;
-  /* Cor de fundo do botão */
+
   color: white;
-  /* Cor do texto do botão */
+
   border: none;
-  /* Remove borda padrão */
+
   border-radius: 4px;
-  /* Bordas arredondadas do botão */
+
   cursor: pointer;
-  /* Cursor de mão ao passar o mouse */
+
   transition: background-color 0.3s;
-  /* Transição suave para a cor de fundo */
+
 }
 
 .submit-button:hover {
   background-color: #0056b3;
-  /* Cor do botão ao passar o mouse */
+
 }
 
 .disabled {
   background-color: #ccc;
-  /* Cor do botão desabilitado */
+
   cursor: not-allowed;
-  /* Cursor de não permitido */
+
 }
 
 .error-message {
   color: red;
-  /* Cor da mensagem de erro geral */
+
   margin-top: 10px;
-  /* Espaço acima da mensagem de erro */
+
 }

@@ -2,28 +2,30 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  let fixture: any;
+  let app: AppComponent;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    app = fixture.componentInstance;
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+  it('deve criar o app', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'usuario-cadastro-frontend' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+  it(`deve ter o título 'usuario-cadastro-frontend'`, () => {
     expect(app.title).toEqual('usuario-cadastro-frontend');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('deve renderizar o título', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, usuario-cadastro-frontend');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Sistema de Cadastro'); 
   });
+
 });

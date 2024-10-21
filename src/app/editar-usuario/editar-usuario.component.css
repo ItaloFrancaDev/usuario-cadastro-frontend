@@ -1,4 +1,4 @@
-/* Estilo para o formulário */
+
 h2 {
   font-size: 24px;
   color: #333;
@@ -46,7 +46,7 @@ input:focus {
   margin-top: 20px;
 }
 
-/* Estilo para o botão Salvar */
+
 button.salvar-btn {
   background-color: #4CAF50;
   color: white;
@@ -62,7 +62,7 @@ button.salvar-btn:hover {
   background-color: #45a049;
 }
 
-/* Estilo para o botão Voltar */
+
 button.voltar-btn {
   background-color: #ffcc00;
   color: black;
@@ -78,7 +78,7 @@ button.voltar-btn:hover {
   background-color: #ffdb4d;
 }
 
-/* Estilos adicionais */
+
 button {
   margin-right: 10px;
 }

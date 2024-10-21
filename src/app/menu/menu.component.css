@@ -1,4 +1,4 @@
-/* Estilo do menu */
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   max-width: 400px;
 }
 
-/* Título do menu */
+
 .menu h1 {
   font-size: 28px;
   font-weight: 700;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-/* Texto do parágrafo */
+
 .menu p {
   font-size: 16px;
   color: #555;
@@ -36,7 +36,7 @@
   width: 100%;
 }
 
-/* Item da lista */
+
 .menu li {
   margin: 15px 0;
 }
@@ -55,49 +55,50 @@
   box-shadow: 0 3px 10px rgba(0, 123, 255, 0.2);
 }
 
-/* Efeito de hover nos links */
+
 .menu-link:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
 }
 
-/* Efeito de foco nos links */
+
 .menu-link:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
-/* Estilo para a animação do botão */
+
 .menu-link:active {
   transform: translateY(0);
   box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
 }
+
 .menu {
   text-align: center;
 }
 
 .menu-button {
   background-color: #4CAF50;
-  /* Cor do fundo */
+
   color: white;
-  /* Cor do texto */
+
   padding: 10px 20px;
-  /* Espaçamento interno */
+
   border: none;
-  /* Remover borda */
+
   border-radius: 5px;
-  /* Bordas arredondadas */
+
   cursor: pointer;
-  /* Mão ao passar o mouse */
+
   font-size: 16px;
-  /* Tamanho da fonte */
+
   margin: 10px;
-  /* Margem entre botões */
+
   transition: background-color 0.3s;
-  /* Efeito de transição */
+
 }
 
 .menu-button:hover {
   background-color: #45a049;
-  /* Cor ao passar o mouse */
+
 }

@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RegistrationService {
+  register(userData: { username: string; password: string; }) {
+    throw new Error('Method not implemented.');
+  }
   private apiUrl = 'http://localhost:8088/api/usuarios/registrar'; // URL da sua API Java
 
   constructor(private http: HttpClient) { }

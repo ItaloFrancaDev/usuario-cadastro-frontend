@@ -31,7 +31,7 @@ export class EditarUsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log('ID do usuário a ser editado:', this.id); // Verifique o ID aqui
+    console.log('ID do usuário a ser editado:', this.id);
     this.carregarUsuario();
   }
 
@@ -44,8 +44,8 @@ export class EditarUsuarioComponent implements OnInit {
 
   onSubmit() {
     if (this.usuarioForm.valid) {
-      const { confirmarSenha, ...usuarioAtualizado } = this.usuarioForm.value; // Remover confirmarSenha
-      console.log('Dados a serem enviados:', usuarioAtualizado); // Verifique os dados aqui
+      const { confirmarSenha, ...usuarioAtualizado } = this.usuarioForm.value;
+      console.log('Dados a serem enviados:', usuarioAtualizado);
       this.http.put(`http://localhost:8088/api/usuarios/alterar/${this.id}`, usuarioAtualizado)
         .subscribe(() => {
           this.router.navigate(['/listar']);
@@ -57,7 +57,7 @@ export class EditarUsuarioComponent implements OnInit {
   }
 
   voltar() {
-    this.router.navigate(['/listar']); // Redireciona para a lista de usuários
+    this.router.navigate(['/listar']); 
   }
 
   confirmarExclusao() {
